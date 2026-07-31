@@ -4,7 +4,7 @@
 
 ## 使用方式
 
-1. 在对应语言目录下新增 Markdown 内容。
+1. 在对应语言目录下新增 MDX 内容。
 2. 遵守 `AI_WRITING_GUIDE.md` 的写作和翻译规范。
 3. 图片源文件放入 `assets/images/`。
 4. Cloudflare R2/CDN 上传结果写入 `assets/manifests/images.json`。

@@ -4,6 +4,8 @@
 
 项目产品本身使用的图片、图标、前端静态资源仍放在前端项目的 `public/` 目录，不迁移到这里。
 
+正式内容契约见 `CONTENT_CONTRACT.md` 与 `templates/`。
+
 ## 设计目标
 
 - 支持 AI 生成内容、自动翻译、多语言人工校对、灰度发布。
@@ -16,8 +18,13 @@
 ```text
 copyapes_content/
   README.md
+  CONTENT_CONTRACT.md
   AI_WRITING_GUIDE.md
   content_index.json
+  templates/
+    blog.example.mdx
+    tutorial.example.mdx
+    legal.example.mdx
   schemas/
     frontmatter.schema.json
     asset_manifest.schema.json
@@ -74,9 +81,10 @@ copyapes_content/
 
 ## 核心文件
 
+- `CONTENT_CONTRACT.md`：内容创作与前端读取契约（必读）。
 - `AI_WRITING_GUIDE.md`：AI 生成、翻译、改写内容时必须遵守的写作规范。
 - `content_index.json`：内容总索引，记录支持语言、内容类型和后续发布状态。
-- `schemas/frontmatter.schema.json`：Markdown frontmatter 字段约束。
+- `schemas/frontmatter.schema.json`：MDX frontmatter 字段约束。
 - `schemas/asset_manifest.schema.json`：图片 manifest 字段约束。
 - `assets/manifests/images.json`：本地图片到 Cloudflare R2/CDN URL 的映射。
 
@@ -97,11 +105,11 @@ copyapes_content/
 示例：
 
 ```text
-copyapes_content/zh-CN/blog/api-risk-control.md
-copyapes_content/zh-TW/blog/api-risk-control.md
-copyapes_content/en-US/blog/api-risk-control.md
-copyapes_content/ja-JP/blog/api-risk-control.md
-copyapes_content/ko-KR/blog/api-risk-control.md
+copyapes_content/zh-CN/blog/api-risk-control.mdx
+copyapes_content/zh-TW/blog/api-risk-control.mdx
+copyapes_content/en-US/blog/api-risk-control.mdx
+copyapes_content/ja-JP/blog/api-risk-control.mdx
+copyapes_content/ko-KR/blog/api-risk-control.mdx
 ```
 
 ## 内容类型
@@ -112,7 +120,7 @@ copyapes_content/ko-KR/blog/api-risk-control.md
 
 ## Frontmatter 约定
 
-Markdown 内容必须有 frontmatter。建议字段如下：
+MDX 内容必须有 frontmatter。建议字段如下：
 
 ```md
 ---
@@ -184,7 +192,7 @@ assets/images/zh-CN/tutorials/api-permission-01.webp
 
 ## 图片引用约定
 
-Markdown 正文建议引用稳定 asset key，不直接写死 Cloudflare URL：
+MDX 正文建议引用稳定 asset key，不直接写死 Cloudflare URL：
 
 ```md
 ![API 权限示例](@asset:tutorials/api-permission-01.webp)
@@ -217,7 +225,7 @@ Markdown 正文建议引用稳定 asset key，不直接写死 Cloudflare URL：
 
 建议按以下流程迭代：
 
-1. 在 `zh-CN` 下创建源文 Markdown，填写 frontmatter。
+1. 在 `zh-CN` 下创建源文 MDX，填写 frontmatter。
 2. 按 `AI_WRITING_GUIDE.md` 生成初稿，状态设为 `draft`。
 3. 补充或上传长内容图片，正文使用 `@asset:` 引用。
 4. 更新 `content_index.json`，登记内容 slug、category、locale 状态。
@@ -233,18 +241,18 @@ Markdown 正文建议引用稳定 asset key，不直接写死 Cloudflare URL：
 - `validate_content.py`：校验 frontmatter、语言目录、slug 一致性、图片引用是否存在。
 - `translate_content.py`：读取源文并生成多语言草稿。
 - `sync_assets_to_r2.py`：增量上传 `assets/images/**` 到 Cloudflare R2，并更新 `images.json`。
-- `build_content_index.py`：扫描 Markdown 自动生成或校验 `content_index.json`。
+- `build_content_index.py`：扫描 MDX 自动生成或校验 `content_index.json`。
 
 ## 命名建议
 
-- 内容文件使用英文短横线 slug：`api-risk-control.md`。
+- 内容文件使用英文短横线 slug：`api-risk-control.mdx`。
 - 图片文件使用英文短横线，按用途编号：`api-permission-01.webp`。
 - 优先使用 `webp`，需要透明背景时使用 `png`。
 - 图片内含文字时，优先放到对应语言目录；不含文字或各语言通用时，放到 `shared`。
 
 ## 上线建议
 
-- 当前阶段先用 Markdown + manifest 管理内容，不急着接重型 CMS。
+- 当前阶段先用 MDX + manifest 管理内容，不急着接重型 CMS。
 - SEO URL 建议由前端拼语言前缀，例如 `/en/blog/api-risk-control`。
 - 图片正式上线走 Cloudflare R2/CDN，GitHub 只作为源文件和 manifest 的版本管理。
 - 发布流程不要依赖人工记忆，后续应逐步收敛到脚本校验和 CI 守卫。

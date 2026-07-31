@@ -13,5 +13,81 @@
     "tutorials",
     "blog"
   ],
-  "items": {}
+  "items": {
+    "blog/ai-changing-product-teams": {
+      "type": "blog",
+      "slug": "ai-changing-product-teams",
+      "path": "blog/ai-changing-product-teams.mdx",
+      "featured": true,
+      "locales": {
+        "en-US": "published"
+      }
+    },
+    "legal/privacy": {
+      "type": "legal",
+      "slug": "privacy",
+      "path": "legal/privacy.mdx",
+      "locales": {
+        "zh-CN": "published",
+        "en-US": "published"
+      }
+    },
+    "legal/terms": {
+      "type": "legal",
+      "slug": "terms",
+      "path": "legal/terms.mdx",
+      "locales": {
+        "zh-CN": "published",
+        "en-US": "published"
+      }
+    },
+    "tutorials/step": {
+      "type": "tutorials",
+      "slug": "step",
+      "path": "tutorials/step.mdx",
+      "locales": {
+        "zh-CN": "published"
+      }
+    },
+    "tutorials/vip/bicoin": {
+      "type": "tutorials",
+      "slug": "vip/bicoin",
+      "path": "tutorials/vip/bicoin.mdx",
+      "locales": {
+        "zh-CN": "published"
+      }
+    },
+    "tutorials/vip/cookie": {
+      "type": "tutorials",
+      "slug": "vip/cookie",
+      "path": "tutorials/vip/cookie.mdx",
+      "locales": {
+        "zh-CN": "published"
+      }
+    },
+    "tutorials/vip/ws": {
+      "type": "tutorials",
+      "slug": "vip/ws",
+      "path": "tutorials/vip/ws.mdx",
+      "locales": {
+        "zh-CN": "published"
+      }
+    },
+    "tutorials/other/add-cookie": {
+      "type": "tutorials",
+      "slug": "other/add-cookie",
+      "path": "tutorials/other/add-cookie.mdx",
+      "locales": {
+        "zh-CN": "published"
+      }
+    },
+    "tutorials/other/grab": {
+      "type": "tutorials",
+      "slug": "other/grab",
+      "path": "tutorials/other/grab.mdx",
+      "locales": {
+        "zh-CN": "published"
+      }
+    }
+  }
 }

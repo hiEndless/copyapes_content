@@ -59,7 +59,8 @@ status: published
 translation_status: reviewed
 ```
 
-- 翻译必须保留 Markdown 结构、frontmatter 字段名和 `@asset:` 引用。
+- 翻译必须保留 Markdown/MDX 结构、frontmatter 字段名和 `@asset:` 引用。
+- 正文文件扩展名必须为 `.mdx`。
 - 不允许把 `@asset:` 替换成 Cloudflare URL。
 - 不允许改动代码块、命令、接口路径、环境变量名、错误码。
 

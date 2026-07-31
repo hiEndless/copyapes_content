@@ -12,11 +12,12 @@
     "published_at",
     "updated_at"
   ],
-  "additionalProperties": true,
+  "additionalProperties": false,
   "properties": {
     "slug": {
       "type": "string",
-      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*(?:/[a-z0-9]+(?:-[a-z0-9]+)*)*$",
+      "description": "跨语言保持一致；教程可含子路径，如 vip/bicoin"
     },
     "title": {
       "type": "string",
@@ -28,57 +29,59 @@
     },
     "category": {
       "type": "string",
-      "enum": [
-        "legal",
-        "tutorial",
-        "blog"
-      ]
+      "enum": ["legal", "tutorial", "blog"]
     },
     "tags": {
       "type": "array",
-      "items": {
-        "type": "string"
-      },
+      "items": { "type": "string", "minLength": 1 },
       "uniqueItems": true
+    },
+    "keywords": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true,
+      "description": "SEO keywords；blog 建议填写"
     },
     "cover_image": {
       "type": "string",
-      "pattern": "^(@asset:|https://).+"
+      "pattern": "^(@asset:|https://|/).*",
+      "description": "blog 必填；tutorials 建议填写；legal 可选。优先 @asset:"
+    },
+    "featured": {
+      "type": "boolean",
+      "description": "是否在博客首页 Hero 展示"
+    },
+    "author": {
+      "type": "object",
+      "required": ["name"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "picture": {
+          "type": "string",
+          "pattern": "^(@asset:|https://|/).*"
+        }
+      }
+    },
+    "read_time": {
+      "type": "string",
+      "description": "阅读时长展示文案，如 9 min / 约 8 分钟"
     },
     "version": {
-      "type": [
-        "string",
-        "number"
-      ]
+      "type": ["string", "number"],
+      "description": "legal 必填"
     },
     "source_locale": {
       "type": "string",
-      "enum": [
-        "zh-CN",
-        "zh-TW",
-        "en-US",
-        "ja-JP",
-        "ko-KR"
-      ]
+      "enum": ["zh-CN", "zh-TW", "en-US", "ja-JP", "ko-KR"]
     },
     "translation_source": {
       "type": "string",
-      "enum": [
-        "zh-CN",
-        "zh-TW",
-        "en-US",
-        "ja-JP",
-        "ko-KR"
-      ]
+      "enum": ["zh-CN", "zh-TW", "en-US", "ja-JP", "ko-KR"]
     },
     "translation_status": {
       "type": "string",
-      "enum": [
-        "source",
-        "machine",
-        "reviewed",
-        "final"
-      ]
+      "enum": ["source", "machine", "reviewed", "final"]
     },
     "published_at": {
       "type": "string",
@@ -90,12 +93,27 @@
     },
     "status": {
       "type": "string",
-      "enum": [
-        "draft",
-        "review",
-        "published",
-        "archived"
-      ]
+      "enum": ["draft", "review", "published", "archived"]
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "category": { "const": "blog" } },
+        "required": ["category"]
+      },
+      "then": {
+        "required": ["cover_image", "tags"]
+      }
+    },
+    {
+      "if": {
+        "properties": { "category": { "const": "legal" } },
+        "required": ["category"]
+      },
+      "then": {
+        "required": ["version"]
+      }
+    }
+  ]
 }

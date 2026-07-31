@@ -1,1 +1,20 @@
-{}
+{
+  "shared/blog/ai-changing-product-teams-cover.webp": {
+    "local_path": "assets/images/shared/blog/ai-changing-product-teams-cover.webp",
+    "r2_key": "content/images/shared/blog/ai-changing-product-teams-cover.webp",
+    "url": "",
+    "sha256": "",
+    "size": 0,
+    "content_type": "image/webp",
+    "updated_at": ""
+  },
+  "shared/blog/author-natalie-brooks.webp": {
+    "local_path": "assets/images/shared/blog/author-natalie-brooks.webp",
+    "r2_key": "content/images/shared/blog/author-natalie-brooks.webp",
+    "url": "",
+    "sha256": "",
+    "size": 0,
+    "content_type": "image/webp",
+    "updated_at": ""
+  }
+}
