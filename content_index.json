@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "default_locale": "zh-CN",
+  "supported_locales": [
+    "zh-CN",
+    "zh-TW",
+    "en-US",
+    "ja-JP",
+    "ko-KR"
+  ],
+  "content_types": [
+    "legal",
+    "tutorials",
+    "blog"
+  ],
+  "items": {}
+}

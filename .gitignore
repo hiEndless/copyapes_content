@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+*.pyc
+.env
+.env.*
+
+# Local generated outputs
+/tmp/
+/dist/
+/build/
+
+# Upload/cache artifacts
+*.log
+*.cache
