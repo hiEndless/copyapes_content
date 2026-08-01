@@ -6,6 +6,12 @@ __pycache__/
 !.env.example
 .idea/
 
+# Local staging / backups (optimized outputs live in assets/images/)
+assets/inbox/**
+!assets/inbox/.gitkeep
+!assets/inbox/README.md
+assets/originals/
+
 # Local generated outputs
 /tmp/
 /dist/

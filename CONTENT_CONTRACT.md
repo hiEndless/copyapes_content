@@ -68,8 +68,20 @@
 - 含文字截图放对应 locale 目录。
 - 推荐 webp；需要透明通道可用 png。
 - 生产 CDN：`https://r2.lichaoyuan.com`（复用既有 Cloudflare R2；对象前缀 `content/images/`）。
+- 原图先放 `assets/inbox/`（镜像最终路径，不提交），再跑优化脚本输出到 `assets/images/`。
+- 文件名含 `-cover` 的图统一为 **1200×630**；其他图最长边 ≤1600。
 
 解析优先级：当前语言目录 > shared > zh-CN。
+
+图片优化：
+
+```bash
+pip install -r scripts/requirements.txt
+# 例：assets/inbox/shared/blog/my-post-cover.jpg
+python scripts/optimize_images.py
+# 可选：保留原图到 assets/originals/
+# python scripts/optimize_images.py --keep-original
+```
 
 上传命令：
 
@@ -81,11 +93,12 @@ CF_SSL_INSECURE=1 python scripts/sync_assets_to_r2.py
 ## 5. 发布清单
 
 1. 在 `zh-CN` 写源文（`.mdx`）并填 frontmatter。
-2. 补齐封面/步骤图，引用 `@asset:`。
-3. 生成其他语言，**同名路径**。
-4. 更新 `content_index.json` 登记 slug / path / locales 状态。
-5. 运行 `scripts/sync_assets_to_r2.py` 上传图片并回填 `assets/manifests/images.json`。
-6. 用 schema 校验；仅将审核通过的条目设为 `published`。
+2. 原图放入 `assets/inbox/`，运行 `scripts/optimize_images.py`，确认输出在 `assets/images/`。
+3. 正文用 `@asset:` 引用；补齐封面。
+4. 生成其他语言，**同名路径**。
+5. 更新 `content_index.json` 登记 slug / path / locales 状态。
+6. 运行 `scripts/sync_assets_to_r2.py` 上传图片并回填 `assets/manifests/images.json`。
+7. 用 schema 校验；仅将审核通过的条目设为 `published`。
 
 ## 6. 索引登记格式
 

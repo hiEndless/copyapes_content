@@ -236,6 +236,7 @@ MDX 正文建议引用稳定 asset key，不直接写死 Cloudflare URL：
 
 ## 脚本
 
+- `scripts/optimize_images.py`：将 `assets/inbox/**` 优化为 webp 并输出到 `assets/images/**`（封面 1200×630）。
 - `scripts/sync_assets_to_r2.py`：增量上传 `assets/images/**` 到 Cloudflare R2（公网 `https://r2.lichaoyuan.com`，前缀 `content/images/`），并更新 `images.json`。使用内容仓 `.env` 中的 `CF_*` 环境变量。
 - 后续建议补充：
   - `validate_content.py`：校验 frontmatter、语言目录、slug 一致性、图片引用是否存在。
