@@ -212,7 +212,7 @@ MDX 正文建议引用稳定 asset key，不直接写死 Cloudflare URL：
   "shared/blog/api-risk-control-cover.webp": {
     "local_path": "assets/images/shared/blog/api-risk-control-cover.webp",
     "r2_key": "content/images/shared/blog/api-risk-control-cover.webp",
-    "url": "https://static.copyapes.com/content/images/shared/blog/api-risk-control-cover.webp",
+    "url": "https://r2.lichaoyuan.com/content/images/shared/blog/api-risk-control-cover.webp",
     "sha256": "",
     "size": 0,
     "content_type": "image/webp",
@@ -232,16 +232,15 @@ MDX 正文建议引用稳定 asset key，不直接写死 Cloudflare URL：
 5. 生成 `zh-TW`、`en-US`、`ja-JP`、`ko-KR` 翻译，保持 slug 和文件名一致。
 6. 人工审核翻译后，将 `translation_status` 改为 `reviewed`。
 7. 发布前用 schema 校验 frontmatter 和图片 manifest。
-8. 图片上传 Cloudflare R2/CDN 后更新 `assets/manifests/images.json`。
+8. 运行 `python scripts/sync_assets_to_r2.py` 上传图片并回填 `assets/manifests/images.json`。
 
-## 后续脚本建议
+## 脚本
 
-`scripts/` 后续建议补充以下脚本：
-
-- `validate_content.py`：校验 frontmatter、语言目录、slug 一致性、图片引用是否存在。
-- `translate_content.py`：读取源文并生成多语言草稿。
-- `sync_assets_to_r2.py`：增量上传 `assets/images/**` 到 Cloudflare R2，并更新 `images.json`。
-- `build_content_index.py`：扫描 MDX 自动生成或校验 `content_index.json`。
+- `scripts/sync_assets_to_r2.py`：增量上传 `assets/images/**` 到 Cloudflare R2（公网 `https://r2.lichaoyuan.com`，前缀 `content/images/`），并更新 `images.json`。使用内容仓 `.env` 中的 `CF_*` 环境变量。
+- 后续建议补充：
+  - `validate_content.py`：校验 frontmatter、语言目录、slug 一致性、图片引用是否存在。
+  - `translate_content.py`：读取源文并生成多语言草稿。
+  - `build_content_index.py`：扫描 MDX 自动生成或校验 `content_index.json`。
 
 ## 命名建议
 

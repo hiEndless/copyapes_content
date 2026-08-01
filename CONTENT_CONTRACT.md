@@ -67,8 +67,16 @@
 - 无文字/多语言通用图放 `assets/images/shared/...`。
 - 含文字截图放对应 locale 目录。
 - 推荐 webp；需要透明通道可用 png。
+- 生产 CDN：`https://r2.lichaoyuan.com`（复用既有 Cloudflare R2；对象前缀 `content/images/`）。
 
 解析优先级：当前语言目录 > shared > zh-CN。
+
+上传命令：
+
+```bash
+# 在内容仓根目录配置 `.env`（见 `.env.example`）；macOS 系统 Python 缺 CA 时可加 CF_SSL_INSECURE=1
+CF_SSL_INSECURE=1 python scripts/sync_assets_to_r2.py
+```
 
 ## 5. 发布清单
 
@@ -76,7 +84,7 @@
 2. 补齐封面/步骤图，引用 `@asset:`。
 3. 生成其他语言，**同名路径**。
 4. 更新 `content_index.json` 登记 slug / path / locales 状态。
-5. 图片上传 R2 后更新 `assets/manifests/images.json`。
+5. 运行 `scripts/sync_assets_to_r2.py` 上传图片并回填 `assets/manifests/images.json`。
 6. 用 schema 校验；仅将审核通过的条目设为 `published`。
 
 ## 6. 索引登记格式

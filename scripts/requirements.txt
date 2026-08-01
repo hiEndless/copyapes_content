@@ -1,0 +1,2 @@
+# Optional. sync_assets_to_r2.py uses Python stdlib only.
+# Keep this file for future scripts that may need AWS helpers.
