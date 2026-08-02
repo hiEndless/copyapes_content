@@ -1,13 +1,4 @@
 {
-  "shared/blog/ai-changing-product-teams-cover.webp": {
-    "local_path": "assets/images/shared/blog/ai-changing-product-teams-cover.webp",
-    "r2_key": "content/images/shared/blog/ai-changing-product-teams-cover.webp",
-    "url": "https://r2.lichaoyuan.com/content/images/shared/blog/ai-changing-product-teams-cover.webp",
-    "sha256": "9a29fb45cd7ca2ff47ba7386a693d4c31d5e924d1f96dd451b583af5bb7c7b8a",
-    "size": 53440,
-    "content_type": "image/webp",
-    "updated_at": "2026-08-01"
-  },
   "shared/blog/author-natalie-brooks.webp": {
     "local_path": "assets/images/shared/blog/author-natalie-brooks.webp",
     "r2_key": "content/images/shared/blog/author-natalie-brooks.webp",

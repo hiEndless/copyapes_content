@@ -14,15 +14,6 @@
     "blog"
   ],
   "items": {
-    "blog/ai-changing-product-teams": {
-      "type": "blog",
-      "slug": "ai-changing-product-teams",
-      "path": "blog/ai-changing-product-teams.mdx",
-      "featured": false,
-      "locales": {
-        "en-US": "published"
-      }
-    },
     "blog/copy-trading-loss-lesson-1": {
       "type": "blog",
       "slug": "copy-trading-loss-lesson-1",

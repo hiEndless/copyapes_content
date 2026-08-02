@@ -25,7 +25,7 @@
 
 | 内容类型 | 内容路径示例 | 前端路由 |
 |----------|--------------|----------|
-| blog | `en-US/blog/ai-changing-product-teams.mdx` | `/blog/ai-changing-product-teams` |
+| blog | `zh-CN/blog/copy-trading-loss-lesson-1.mdx` | `/blog/copy-trading-loss-lesson-1` |
 | tutorials | `zh-CN/tutorials/step.mdx` | `/docs/step` |
 | tutorials | `zh-CN/tutorials/vip/bicoin.mdx` | `/docs/vip/bicoin` |
 | legal | `zh-CN/legal/privacy.mdx` | `/privacy` |
@@ -106,14 +106,14 @@ CF_SSL_INSECURE=1 python scripts/sync_assets_to_r2.py
 
 ```json
 {
-  "blog/ai-changing-product-teams": {
+  "blog/copy-trading-loss-lesson-1": {
     "type": "blog",
-    "slug": "ai-changing-product-teams",
-    "path": "blog/ai-changing-product-teams.mdx",
+    "slug": "copy-trading-loss-lesson-1",
+    "path": "blog/copy-trading-loss-lesson-1.mdx",
     "featured": true,
     "locales": {
-      "en-US": "published",
-      "zh-CN": "draft"
+      "zh-CN": "published",
+      "en-US": "published"
     }
   }
 }

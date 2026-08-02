@@ -23,12 +23,12 @@ read_time: 12 min
 source_locale: zh-CN
 translation_source: zh-CN
 translation_status: machine
-published_at: 2026-08-02
-updated_at: 2026-08-02
+published_at: "2026-08-02"
+updated_at: "2026-08-02"
 status: published
 ---
 
-Why do copy traders keep losing money? **The core issue is often not that the strategy itself failed, but that you are copying a person with emotions, private incentives, and multi-account operations—not a neutral, fully reproducible system.**
+Why do copy traders keep losing money? **Short answer: in most cases it is not that the strategy itself failed, but that you are copying a person with emotions, private incentives, and multi-account operations—not a neutral, fully reproducible system.**
 
 As an independent crypto developer, I have researched many quantitative approaches, worked with major exchange APIs, and built copy-trading scripts and even SaaS products. In this space I am both a builder and an active trader: I have observed many traders, some officially lead-trading, others only publishing live accounts. Platform mechanics, trader behavior, technical blind spots, and user psychology are familiar ground.
 
@@ -37,6 +37,8 @@ The deeper you look, the harder it is to avoid one fact: most people who try to 
 So I am writing a series that unpacks the roots layer by layer. This first piece focuses on the most overlooked yet most critical point: what you are following is not only a strategy, but a person with emotions and private interests.
 
 > Risk notice: Copy trading and derivatives trading both involve risk of capital loss. This article is observation and mechanism analysis, not investment advice, and does not guarantee any return.
+>
+> Based on the author's first-hand notes from 2023–2026 across multi-exchange copy scripts, public live-account observation, and client trade reviews. The ~0.3s latency comparison comes from fill logs under the same trader in different network environments, not lab backtests.
 
 ## Phenomenon vs Mechanism: What You See vs What Actually Happens
 
@@ -151,5 +153,23 @@ Later parts of this series will continue from platform mechanics, technical late
 3. A single-account curve cannot represent a trader’s overall books and true P&L.
 4. Futures/spot (and margin-type) mismatches cause native copy leakage.
 5. In competitive liquidity scenarios, latency moves profit from followers to faster parties.
+
+## FAQ
+
+### What is the most common reason copy traders lose money?
+
+Usually not a sudden strategy breakdown, but following a person with emotions and private incentives—plus misaligned rewards, sliced multi-account books, futures/spot mismatches, and latency disadvantages.
+
+### Does a high public live-account return mean it is worth copying?
+
+Not necessarily. A public curve may be a display slice, not overall P&L. If the trader does not open official lead trading, incentives and constraints are harder to align.
+
+### How much can latency affect copy-trading returns?
+
+In liquidity-race scenarios, a lot. Under the same trader, roughly 0.3 seconds of exit delay alone can create a large return gap between clients.
+
+### How can followers reduce “liquidity trap” risk?
+
+Check incentive alignment, whether only a single display account is visible, whether the copy system covers spot/margin switches, and your own latency/slippage. Treat unexplained short-horizon “myth” returns with caution.
 
 Copy trading involves risk. Decisions must be independent. Copying anyone’s positions cannot replace your own risk control.
