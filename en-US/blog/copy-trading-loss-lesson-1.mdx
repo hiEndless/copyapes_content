@@ -38,7 +38,7 @@ So I am writing a series that unpacks the roots layer by layer. This first piece
 
 > Risk notice: Copy trading and derivatives trading both involve risk of capital loss. This article is observation and mechanism analysis, not investment advice, and does not guarantee any return.
 >
-> Based on the author's first-hand notes from 2023–2026 across multi-exchange copy scripts, public live-account observation, and client trade reviews. The ~0.3s latency comparison comes from fill logs under the same trader in different network environments, not lab backtests.
+> Based on the author's first-hand notes from 2023–2026 across multi-exchange copy scripts, public live-account observation, and client trade reviews. The ~0.3s latency comparison comes from fill logs under the same trader in different network environments, not lab backtests. For industry context, see exchange product pages: [Binance Copy Trading](https://www.binance.com/en/copy-trading), [OKX Copy Trading](https://www.okx.com/copy-trading), and the overview [Copy trading (Wikipedia)](https://en.wikipedia.org/wiki/Copy_trading).
 
 ## Phenomenon vs Mechanism: What You See vs What Actually Happens
 
@@ -171,5 +171,13 @@ In liquidity-race scenarios, a lot. Under the same trader, roughly 0.3 seconds o
 ### How can followers reduce “liquidity trap” risk?
 
 Check incentive alignment, whether only a single display account is visible, whether the copy system covers spot/margin switches, and your own latency/slippage. Treat unexplained short-horizon “myth” returns with caution.
+
+## References
+
+- [Binance Copy Trading](https://www.binance.com/en/copy-trading) — official lead/copy product page for comparing “official lead trading vs public live accounts.”
+- [OKX Copy Trading](https://www.okx.com/copy-trading) — another major venue’s copy-trading entry point and incentive packaging.
+- [Copy trading (Wikipedia)](https://en.wikipedia.org/wiki/Copy_trading) — concept and historical background.
+- [About CopyApes](https://copyapes.com/about) — author/product background.
+- [Contact](https://copyapes.com/#contact) / [service@copyapes.com](mailto:service@copyapes.com) — feedback and support.
 
 Copy trading involves risk. Decisions must be independent. Copying anyone’s positions cannot replace your own risk control.

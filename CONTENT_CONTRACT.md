@@ -26,10 +26,11 @@
 | 内容类型 | 内容路径示例 | 前端路由 |
 |----------|--------------|----------|
 | blog | `zh-CN/blog/copy-trading-loss-lesson-1.mdx` | `/blog/copy-trading-loss-lesson-1` |
-| tutorials | `zh-CN/tutorials/step.mdx` | `/docs/step` |
-| tutorials | `zh-CN/tutorials/vip/bicoin.mdx` | `/docs/vip/bicoin` |
+| tutorials | （暂无正文；路径约定保留，后续再迁移） | `/docs/...` |
 | legal | `zh-CN/legal/privacy.mdx` | `/privacy` |
 | legal | `zh-CN/legal/terms.mdx` | `/terms` |
+
+> 说明：`tutorials/` 正文与图片已暂时移出本仓库，契约路径与 `templates/tutorial.example.mdx` 仍保留，待后续迁移回填。
 
 ## 2. 类型必填矩阵
 

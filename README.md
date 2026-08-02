@@ -115,7 +115,7 @@ copyapes_content/ko-KR/blog/api-risk-control.mdx
 ## 内容类型
 
 - `legal/`：用户协议、隐私政策、免责声明、风险提示。
-- `tutorials/`：产品教程、API 添加教程、Cookie 获取教程、跟单配置教程。
+- `tutorials/`：产品教程等（正文暂已移出，路径与模板保留，后续再迁移）。
 - `blog/`：营销博客、SEO 内容、行业观点、功能介绍。
 
 ## Frontmatter 约定
