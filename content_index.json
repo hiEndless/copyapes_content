@@ -18,9 +18,18 @@
       "type": "blog",
       "slug": "ai-changing-product-teams",
       "path": "blog/ai-changing-product-teams.mdx",
-      "featured": true,
+      "featured": false,
       "locales": {
         "en-US": "published"
+      }
+    },
+    "blog/copy-trading-loss-lesson-1": {
+      "type": "blog",
+      "slug": "copy-trading-loss-lesson-1",
+      "path": "blog/copy-trading-loss-lesson-1.mdx",
+      "featured": true,
+      "locales": {
+        "zh-CN": "published"
       }
     },
     "legal/privacy": {

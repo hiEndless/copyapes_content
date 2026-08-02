@@ -1,4 +1,4 @@
-# CopyApeS 内容契约
+# CopyApes 内容契约
 
 前端从 GitHub 仓库 `hiEndless/copyapes_content` 读取长内容。新增/修改内容必须遵守本契约与 `schemas/*.schema.json`。
 
@@ -36,7 +36,7 @@
 | 字段 | blog | tutorials | legal |
 |------|:----:|:---------:|:-----:|
 | slug / title / description | 必填 | 必填 | 必填 |
-| category | `blog` | `tutorial` | `legal` |
+| category | `Blog` | `tutorial` | `legal` |
 | status / published_at / updated_at | 必填 | 必填 | 必填 |
 | cover_image | **必填** | 建议 | 可选 |
 | tags | **必填** | 建议 | 可选 |

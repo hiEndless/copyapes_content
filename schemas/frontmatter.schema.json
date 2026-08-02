@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://copyapes.com/schemas/content-frontmatter.schema.json",
-  "title": "CopyApeS Content Frontmatter",
+  "title": "CopyApes Content Frontmatter",
   "type": "object",
   "required": [
     "slug",
@@ -29,7 +29,7 @@
     },
     "category": {
       "type": "string",
-      "enum": ["legal", "tutorial", "blog"]
+      "enum": ["legal", "tutorial", "Blog"]
     },
     "tags": {
       "type": "array",
@@ -99,7 +99,7 @@
   "allOf": [
     {
       "if": {
-        "properties": { "category": { "const": "blog" } },
+        "properties": { "category": { "const": "Blog" } },
         "required": ["category"]
       },
       "then": {

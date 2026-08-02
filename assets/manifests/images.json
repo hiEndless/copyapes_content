@@ -16,5 +16,14 @@
     "size": 10956,
     "content_type": "image/webp",
     "updated_at": "2026-08-01"
+  },
+  "shared/blog/copy-trading-loss-lesson-1-cover.webp": {
+    "local_path": "assets/images/shared/blog/copy-trading-loss-lesson-1-cover.webp",
+    "r2_key": "content/images/shared/blog/copy-trading-loss-lesson-1-cover.webp",
+    "url": "https://r2.lichaoyuan.com/content/images/shared/blog/copy-trading-loss-lesson-1-cover.webp",
+    "sha256": "89cb7609e9966ab609cf31aec48b13cb3b0be1c87eee9ecdf03a565dec62dc9d",
+    "size": 27918,
+    "content_type": "image/webp",
+    "updated_at": "2026-08-02"
   }
 }

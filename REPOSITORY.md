@@ -1,6 +1,6 @@
-# CopyApeS Content Repository
+# CopyApes Content Repository
 
-这是 CopyApeS 独立内容仓库，用于维护用户协议、教程、博客、SEO 内容和长内容图片资产。
+这是 CopyApes 独立内容仓库，用于维护用户协议、教程、博客、SEO 内容和长内容图片资产。
 
 ## 使用方式
 

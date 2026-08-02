@@ -1,4 +1,4 @@
-# CopyApeS 内容目录说明
+# CopyApes 内容目录说明
 
 该目录只存放网站长内容资产，包括用户协议、隐私政策、教程、帮助文档、营销博客、SEO 内容，以及这些长内容引用的图片。
 
@@ -126,7 +126,7 @@ MDX 内容必须有 frontmatter。建议字段如下：
 ---
 slug: api-risk-control
 title: API 风控与安全设置
-description: 介绍 CopyApeS API 权限、IP 白名单和跟单安全设置。
+description: 介绍 CopyApes API 权限、IP 白名单和跟单安全设置。
 category: tutorial
 tags:
   - api
@@ -143,7 +143,7 @@ status: published
 字段说明：
 
 - `slug`：同一篇内容在所有语言中保持一致。
-- `category`：使用 `legal`、`tutorial`、`blog`。
+- `category`：使用 `legal`、`tutorial`、`Blog`。
 - `status`：使用 `draft`、`review`、`published`、`archived`。
 - `translation_status`：源文用 `source`，机翻用 `machine`，人工审核后用 `reviewed`。
 - `cover_image`：优先使用 `@asset:`，不要直接写死 Cloudflare URL。
