@@ -29,7 +29,11 @@
       "path": "blog/copy-trading-loss-lesson-1.mdx",
       "featured": true,
       "locales": {
-        "zh-CN": "published"
+        "zh-CN": "published",
+        "zh-TW": "published",
+        "en-US": "published",
+        "ja-JP": "published",
+        "ko-KR": "published"
       }
     },
     "legal/privacy": {
