@@ -27,6 +27,19 @@
         "ko-KR": "published"
       }
     },
+    "blog/copy-trading-loss-lesson-2": {
+      "type": "blog",
+      "slug": "copy-trading-loss-lesson-2",
+      "path": "blog/copy-trading-loss-lesson-2.mdx",
+      "featured": false,
+      "locales": {
+        "zh-CN": "published",
+        "zh-TW": "published",
+        "en-US": "published",
+        "ja-JP": "published",
+        "ko-KR": "published"
+      }
+    },
     "legal/privacy": {
       "type": "legal",
       "slug": "privacy",
