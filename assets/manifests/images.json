@@ -6,23 +6,23 @@
     "sha256": "47f88825398cbfe5a2bc3b49bf4bb7d95c34516a9052fefe616237398970dded",
     "size": 10956,
     "content_type": "image/webp",
-    "updated_at": "2026-08-01"
+    "updated_at": "2026-08-04"
   },
   "shared/blog/copy-trading-loss-lesson-1-cover.webp": {
     "local_path": "assets/images/shared/blog/copy-trading-loss-lesson-1-cover.webp",
     "r2_key": "content/images/shared/blog/copy-trading-loss-lesson-1-cover.webp",
     "url": "https://r2.lichaoyuan.com/content/images/shared/blog/copy-trading-loss-lesson-1-cover.webp",
-    "sha256": "89cb7609e9966ab609cf31aec48b13cb3b0be1c87eee9ecdf03a565dec62dc9d",
-    "size": 27918,
+    "sha256": "7321aea3f7f3113177cb04b7dbb610c1619f49e49339390dc53f7593b13dd1ab",
+    "size": 25638,
     "content_type": "image/webp",
-    "updated_at": "2026-08-02"
+    "updated_at": "2026-08-04"
   },
   "shared/blog/copy-trading-loss-lesson-2-cover.webp": {
     "local_path": "assets/images/shared/blog/copy-trading-loss-lesson-2-cover.webp",
-    "r2_key": "content/images/shared/blog/copy-trading-loss-lesson-1-cover.webp",
-    "url": "https://r2.lichaoyuan.com/content/images/shared/blog/copy-trading-loss-lesson-1-cover.webp",
-    "sha256": "89cb7609e9966ab609cf31aec48b13cb3b0be1c87eee9ecdf03a565dec62dc9d",
-    "size": 27918,
+    "r2_key": "content/images/shared/blog/copy-trading-loss-lesson-2-cover.webp",
+    "url": "https://r2.lichaoyuan.com/content/images/shared/blog/copy-trading-loss-lesson-2-cover.webp",
+    "sha256": "192743aa010574d73c11ed54438a66079a391ade0c36af8a2b5daf05e2ca1dd7",
+    "size": 40168,
     "content_type": "image/webp",
     "updated_at": "2026-08-04"
   }

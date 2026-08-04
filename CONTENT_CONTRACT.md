@@ -62,6 +62,7 @@
 ## 4. 封面与正文图片
 
 - blog **必须**提供 `cover_image`。
+- 封面风格提示词（统一浅色扁平矢量 / 粉彩线稿、无烧字）：`templates/blog-cover.prompt.txt`。
 - 优先：`cover_image: "@asset:blog/xxx-cover.webp"`。
 - 正文图片：`![说明](@asset:tutorials/xxx-01.webp)`。
 - 禁止在正文写死 Cloudflare/CDN URL；由 `assets/manifests/images.json` 解析。

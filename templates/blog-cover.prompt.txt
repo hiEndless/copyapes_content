@@ -1,0 +1,53 @@
+# CopyApes blog cover generation template
+# Size: 1200x630 (16:9). No burned-in title/logo text (reuse across locales).
+# Style refs: flat pastel vector / soft line art / light isometric (see team reference set).
+# Workflow: generate → assets/inbox/shared/blog/{slug}-cover.png → scripts/optimize_images.py → sync R2
+
+## Style references (intent)
+- Flat 2D vector illustration with thin, clean outlines
+- Soft pastel palette on a light cream / pale-blue background
+- Approachable educational tech mood (not cyberpunk, not photo-real)
+- Optional light isometric props; keep scene uncluttered
+- Conceptual metaphors via simple objects + network nodes / dashed links / soft glow accents
+
+## Master prompt (fixed)
+
+Create a blog cover image for CopyApes (跟单猿), a crypto copy-trading education brand.
+
+Format: 1200x630, 16:9, horizontal, high-resolution, web-ready.
+Style: modern flat vector illustration, thin uniform outlines, minimalist 2D (or gentle isometric props), similar to soft pastel tech explainers — NOT photorealistic, NOT 3D render, NOT dark neon cyberpunk.
+Background: light cream or pale blue (#F7F5F0 to #E8F2FA), clean and airy, with soft negative space on one side for optional title overlay.
+Color palette: muted pastels — soft blue, mint, peach, lavender, warm grey; low-to-medium contrast; restrained soft glow on a few UI/network accents only.
+Composition: one clear central scene or metaphor (~60% of frame); balanced, uncluttered; no dense dashboards; keep edges clean.
+Mood: calm, focused, professional, approachable, slightly cautionary educational tone.
+Characters (if any): simplified flat characters with minimal facial detail; casual modern clothes; no celebrity likeness.
+Typography in image: NONE (no title, no watermark, no logo text, no Chinese/English letters, no headline numbers, no fake UI copy).
+Avoid: purple-pink neon gradients, glossy crypto-coin piles, money rain, trophies, rocket-to-moon charts, stock-photo traders, busy exchange screenshots, readable tickers, meme-coin aesthetics, Corporate Memphis exaggeration, dark starfield backgrounds.
+Output: crisp vector-like shapes, soft flat shading, minimal noise, suitable as Next.js blog cover and Open Graph image.
+
+## Variable block (per article)
+
+Article theme: {one-line theme}
+Core metaphor: {one primary scene/metaphor in flat vector language}
+Scene props: {2-4 simple objects, e.g. laptop, phone on tripod, books, magnifier, globe, nodes}
+Risk tone: {low | medium | high caution}
+Must include visual cue: {e.g. dual accounts, survivor funnel, hedge arrows, latency trail}
+Avoid specifically: {clichés to skip for this piece}
+
+## Series examples
+
+### copy-trading-loss-lesson-1
+Article theme: the platform “top trader” is not a neutral actor; incentives, emotion, and multi-account structure
+Core metaphor: a calm desk scene where one polished public “profile card” sits in front, while a second dimmer account card / mask peeks behind it — display layer vs hidden layer
+Scene props: laptop, two overlapping profile cards, soft dashed links, small plant
+Risk tone: medium
+Must include visual cue: dual overlapping identity cards / mask vs true form; subtle misalignment
+Avoid specifically: handshake trust badge, trophy trader, green rocket P&L, dark neon bust
+
+### copy-trading-loss-lesson-2
+Article theme: farmed “star” lead-trader accounts via multi-account long/short screening
+Core metaphor: many small pastel account nodes on the left flowing through a soft funnel into one highlighted survivor node — selection, not skill
+Scene props: phone or laptop, node network, funnel paths with opposing soft arrows, magnifying glass
+Risk tone: high caution
+Must include visual cue: multi-node → funnel → single survivor; opposing long/short paths collapsing to one
+Avoid specifically: trophy, money rain, smiling influencer, steep green rocket chart, dark cyber funnel
