@@ -1,0 +1,54 @@
+---
+slug: vip/ws
+title: "API Copy Trading"
+description: "API Copy Trading"
+category: tutorial
+tags:
+  - vip
+source_locale: zh-CN
+translation_source: zh-CN
+translation_status: machine
+published_at: 2026-08-04
+updated_at: 2026-08-04
+status: published
+---
+
+<iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=115096701372462&bvid=BV1egekzLEgR&cid=31964137847&p=1&autoplay=0"
+        frameBorder="0" allowFullScreen  width="100%" height="450px"/>
+
+<Note>
+    API copy trading use cases:
+    1. Private-domain lead trading where no profit share is taken from copy accounts.
+    2. You privately obtain a skilled trader’s trading-account API and want to copy their trades privately—or even sell their position data for others to copy.
+    3. You use another third-party quant or copy-trading tool and do not want to share profits with them: run a small account with the minimum amount on their platform, then sync positions to your main account.
+</Note>
+
+<Step>
+
+    <StepItem title="Add a lead-trading API">
+        [Add a read-only API](/docs/exchange/add), and give the API a name.
+
+        <Note title="Note" type="warning">
+            Do not add an IP whitelist to this API, or copy trading will not work.
+        </Note>
+    </StepItem>
+    <StepItem title="Select or search for the API to follow">
+        ![Ws Pn](@asset:tutorials/ws.png)
+    </StepItem>
+    <StepItem title="Create a copy-trading task">
+        <Note>
+            Start copying only when the lead API account is flat (no open positions)\
+            Otherwise, when the trader adds or reduces size, you may be opened into their remaining position size (this case will be optimized later)\
+            \
+            Example:\
+            The trader already holds BTC with size 2.\
+            If they add size and BTC becomes 3 (add 1), and you copy 1:1, your position jumps from 0 to 3.\
+            If they reduce size and BTC becomes 1 (reduce 1), and you copy 1:1, your position jumps from 0 to 1.\
+            To avoid this, wait until the lead account is flat before starting to copy.
+        </Note>
+        Fill in the copy-trading task details and create the task.
+
+        This method has the lowest latency and the highest stability.
+    </StepItem>
+
+</Step>

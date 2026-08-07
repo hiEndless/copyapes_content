@@ -1,0 +1,54 @@
+---
+slug: vip/ws
+title: "API 카피"
+description: "API 카피"
+category: tutorial
+tags:
+  - vip
+source_locale: zh-CN
+translation_source: zh-CN
+translation_status: machine
+published_at: 2026-08-04
+updated_at: 2026-08-04
+status: published
+---
+
+<iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=115096701372462&bvid=BV1egekzLEgR&cid=31964137847&p=1&autoplay=0"
+        frameBorder="0" allowFullScreen  width="100%" height="450px"/>
+
+<Note>
+    API 카피 적용 시나리오:
+    1. 비공개(프라이빗) 리드이며, 카피 계좌에서 거래 수익 분배를 받지 않는 경우.
+    2. 고수 거래 계좌 API를 비공개로 확보했고, 그 거래를 비공개로 카피하거나 포지션 정보를 판매해 다른 사람이 카피하게 하려는 경우.
+    3. 다른 제3자 퀀트/카피 도구를 쓰면서 상대에게 수익 분배를 주기 싫은 경우: 상대 플랫폼에서는 최소 금액의 서브 계정만 쓰고, 포지션을 본인 메인 계정에 동기화합니다.
+</Note>
+
+<Step>
+
+    <StepItem title="리드 API 추가">
+        [읽기 전용 API 추가](/docs/exchange/add) 후 API 이름을 설정하세요
+
+        <Note title="주의" type="warning">
+            이 API에 IP 화이트리스트를 넣지 마세요. 넣으면 카피가 불가능합니다
+        </Note>
+    </StepItem>
+    <StepItem title="따라갈 API 선택 또는 검색">
+        ![Ws Pn](@asset:tutorials/ws.png)
+    </StepItem>
+    <StepItem title="카피 작업 생성">
+        <Note>
+            리드 API가 무포지션일 때 카피를 시작하세요\
+            그렇지 않으면 트레이더가 증감할 때 남은 포지션량이 열릴 수 있습니다(이후 이 케이스를 최적화할 예정)\
+            \
+            예시:\
+            현재 트레이더가 이미 BTC를 보유 중이고 수량이 2입니다.\
+            증량해 BTC가 3(증가 1)이 되고 1:1로 카피하면, 당신의 포지션은 0에서 바로 3이 됩니다.\
+            감량해 BTC가 1(감소 1)이 되고 1:1로 카피하면, 당신의 포지션은 0에서 바로 1이 됩니다.\
+            이를 피하려면 리드 계좌가 무포지션일 때 카피하는 것이 좋습니다.
+        </Note>
+        카피 작업 정보를 입력하고 카피를 생성하세요.
+
+        이 방식은 지연이 가장 낮고 안정성이 가장 높습니다.
+    </StepItem>
+
+</Step>

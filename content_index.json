@@ -60,6 +60,222 @@
         "ja-JP": "published",
         "ko-KR": "published"
       }
+    },
+    "tutorials/protocol": {
+      "type": "tutorials",
+      "slug": "protocol",
+      "path": "tutorials/protocol.mdx",
+      "locales": {
+        "zh-CN": "published",
+        "zh-TW": "published",
+        "en-US": "published",
+        "ja-JP": "published",
+        "ko-KR": "published"
+      }
+    },
+    "tutorials/step": {
+      "type": "tutorials",
+      "slug": "step",
+      "path": "tutorials/step.mdx",
+      "locales": {
+        "zh-CN": "published",
+        "zh-TW": "published",
+        "en-US": "published",
+        "ja-JP": "published",
+        "ko-KR": "published"
+      }
+    },
+    "tutorials/task-info": {
+      "type": "tutorials",
+      "slug": "task-info",
+      "path": "tutorials/task-info.mdx",
+      "locales": {
+        "zh-CN": "published",
+        "zh-TW": "published",
+        "en-US": "published",
+        "ja-JP": "published",
+        "ko-KR": "published"
+      }
+    },
+    "tutorials/exchange/okx": {
+      "type": "tutorials",
+      "slug": "exchange/okx",
+      "path": "tutorials/exchange/okx.mdx",
+      "locales": {
+        "zh-CN": "published",
+        "zh-TW": "published",
+        "en-US": "published",
+        "ja-JP": "published",
+        "ko-KR": "published"
+      }
+    },
+    "tutorials/exchange/binance": {
+      "type": "tutorials",
+      "slug": "exchange/binance",
+      "path": "tutorials/exchange/binance.mdx",
+      "locales": {
+        "zh-CN": "published",
+        "zh-TW": "published",
+        "en-US": "published",
+        "ja-JP": "published",
+        "ko-KR": "published"
+      }
+    },
+    "tutorials/exchange/gate": {
+      "type": "tutorials",
+      "slug": "exchange/gate",
+      "path": "tutorials/exchange/gate.mdx",
+      "locales": {
+        "zh-CN": "published",
+        "zh-TW": "published",
+        "en-US": "published",
+        "ja-JP": "published",
+        "ko-KR": "published"
+      }
+    },
+    "tutorials/exchange/add": {
+      "type": "tutorials",
+      "slug": "exchange/add",
+      "path": "tutorials/exchange/add.mdx",
+      "locales": {
+        "zh-CN": "published",
+        "zh-TW": "published",
+        "en-US": "published",
+        "ja-JP": "published",
+        "ko-KR": "published"
+      }
+    },
+    "tutorials/okx/open": {
+      "type": "tutorials",
+      "slug": "okx/open",
+      "path": "tutorials/okx/open.mdx",
+      "locales": {
+        "zh-CN": "published",
+        "zh-TW": "published",
+        "en-US": "published",
+        "ja-JP": "published",
+        "ko-KR": "published"
+      }
+    },
+    "tutorials/okx/person": {
+      "type": "tutorials",
+      "slug": "okx/person",
+      "path": "tutorials/okx/person.mdx",
+      "locales": {
+        "zh-CN": "published",
+        "zh-TW": "published",
+        "en-US": "published",
+        "ja-JP": "published",
+        "ko-KR": "published"
+      }
+    },
+    "tutorials/binance/open": {
+      "type": "tutorials",
+      "slug": "binance/open",
+      "path": "tutorials/binance/open.mdx",
+      "locales": {
+        "zh-CN": "published",
+        "zh-TW": "published",
+        "en-US": "published",
+        "ja-JP": "published",
+        "ko-KR": "published"
+      }
+    },
+    "tutorials/binance/close": {
+      "type": "tutorials",
+      "slug": "binance/close",
+      "path": "tutorials/binance/close.mdx",
+      "locales": {
+        "zh-CN": "published",
+        "zh-TW": "published",
+        "en-US": "published",
+        "ja-JP": "published",
+        "ko-KR": "published"
+      }
+    },
+    "tutorials/vip/bicoin": {
+      "type": "tutorials",
+      "slug": "vip/bicoin",
+      "path": "tutorials/vip/bicoin.mdx",
+      "locales": {
+        "zh-CN": "published",
+        "zh-TW": "published",
+        "en-US": "published",
+        "ja-JP": "published",
+        "ko-KR": "published"
+      }
+    },
+    "tutorials/vip/hot": {
+      "type": "tutorials",
+      "slug": "vip/hot",
+      "path": "tutorials/vip/hot.mdx",
+      "locales": {
+        "zh-CN": "published",
+        "zh-TW": "published",
+        "en-US": "published",
+        "ja-JP": "published",
+        "ko-KR": "published"
+      }
+    },
+    "tutorials/vip/cookie": {
+      "type": "tutorials",
+      "slug": "vip/cookie",
+      "path": "tutorials/vip/cookie.mdx",
+      "locales": {
+        "zh-CN": "published",
+        "zh-TW": "published",
+        "en-US": "published",
+        "ja-JP": "published",
+        "ko-KR": "published"
+      }
+    },
+    "tutorials/vip/ws": {
+      "type": "tutorials",
+      "slug": "vip/ws",
+      "path": "tutorials/vip/ws.mdx",
+      "locales": {
+        "zh-CN": "published",
+        "zh-TW": "published",
+        "en-US": "published",
+        "ja-JP": "published",
+        "ko-KR": "published"
+      }
+    },
+    "tutorials/other/add-cookie": {
+      "type": "tutorials",
+      "slug": "other/add-cookie",
+      "path": "tutorials/other/add-cookie.mdx",
+      "locales": {
+        "zh-CN": "published",
+        "zh-TW": "published",
+        "en-US": "published",
+        "ja-JP": "published",
+        "ko-KR": "published"
+      }
+    },
+    "tutorials/other/grab": {
+      "type": "tutorials",
+      "slug": "other/grab",
+      "path": "tutorials/other/grab.mdx",
+      "locales": {
+        "zh-CN": "published",
+        "zh-TW": "published",
+        "en-US": "published",
+        "ja-JP": "published",
+        "ko-KR": "published"
+      }
+    },
+    "tutorials/other/partner": {
+      "type": "tutorials",
+      "slug": "other/partner",
+      "path": "tutorials/other/partner.mdx",
+      "locales": {
+        "zh-CN": "published",
+        "zh-TW": "published",
+        "en-US": "published",
+        "ja-JP": "published",
+        "ko-KR": "published"
+      }
     }
   }
 }

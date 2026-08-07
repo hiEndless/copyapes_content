@@ -1,0 +1,54 @@
+---
+slug: vip/ws
+title: "APIコピー"
+description: "APIコピー"
+category: tutorial
+tags:
+  - vip
+source_locale: zh-CN
+translation_source: zh-CN
+translation_status: machine
+published_at: 2026-08-04
+updated_at: 2026-08-04
+status: published
+---
+
+<iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=115096701372462&bvid=BV1egekzLEgR&cid=31964137847&p=1&autoplay=0"
+        frameBorder="0" allowFullScreen  width="100%" height="450px"/>
+
+<Note>
+    APIコピーの適用シーン：
+    1. 私域リードで、コピー口座から取引分配を取らない場合。
+    2. 私下で高手の取引口座APIを入手でき、その取引を私下コピーしたい、あるいはポジション情報を他人に売ってコピーさせたい場合。
+    3. 他社のクオンツソフトやコピーツールを使っており、相手に収益分配したくない場合。相手プラットフォームでは少額のサブ口座だけで使い、ポジションを自分のメイン口座へ同期する。
+</Note>
+
+<Step>
+
+    <StepItem title="リード用APIを追加する">
+        [読み取り専用APIを追加](/docs/exchange/add)し、APIに名前を付けます
+
+        <Note title="注意" type="warning">
+            このAPIにIPホワイトリストを付けないでください。付けた場合はコピーできません
+        </Note>
+    </StepItem>
+    <StepItem title="フォローするAPIを選択または検索する">
+        ![Ws Pn](@asset:tutorials/ws.png)
+    </StepItem>
+    <StepItem title="コピータスクを作成する">
+        <Note>
+            リードAPIが空ポジションのときにコピーを開始してください\
+            そうでないと、トレーダーが増減倉したときに残存ポジション量が開かれる場合があります（後でこのケースは最適化予定）\
+            \
+            例：\
+            現在トレーダーはすでにBTCを保有し、数量は2。\
+            増倉してBTCが3（増分1）になり、1対1でコピーすると、あなたの保有は0から一気に3になります。\
+            減倉してBTCが1（減分1）になり、1対1でコピーすると、あなたの保有は0から一気に1になります。\
+            これを避けるため、リード口座が空ポジションになってからコピーを始めるのが最善です。
+        </Note>
+        コピータスク情報を入力し、コピーを作成します。
+
+        この方式は遅延が最も低く、安定性が最も高いです。
+    </StepItem>
+
+</Step>

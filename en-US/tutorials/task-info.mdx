@@ -1,0 +1,32 @@
+---
+slug: task-info
+title: "Copy Trading Form Field Guide"
+description: "Copy Trading Form Field Guide"
+category: tutorial
+tags:
+  - getting-started
+source_locale: zh-CN
+translation_source: zh-CN
+translation_status: machine
+published_at: 2026-08-17
+updated_at: 2026-08-17
+status: published
+---
+
+**Copy Trading Mode**: At first we developed fixed-ratio copy trading and fixed-amount copy trading. As the product evolved, only fixed-ratio copy trading was retained—this is the current Smart Copy Trading. When you create a task, trades are copied according to a fixed ratio between the trader’s capital and the amount you choose to allocate for copy trading.
+
+**Multiplier Mode**: Defaults to 1. Sometimes the fixed-ratio open size is too small and does not meet the exchange’s minimum requirement. You can manually increase the open ratio—for example to 1.5 or 2—and your position risk will increase by the same factor. Your trade size = (trader’s trade size \* your investment amount / trader’s principal) \* multiplier
+
+**Leverage Setting**: You can open positions with your own custom leverage, or keep the same leverage as the trader. Some copy trading modes cannot obtain the trader’s leverage data, so you must manually set a default leverage. Leverage size does not affect the trade size of each order; it only affects the share of capital used. The actual position risk remains aligned with following the trader.
+
+**Range Order**: Exchanges may delay position information—for example OKX may delay by 5 minutes. This open mode was built for that case. It only applies when opening a position. Add, reduce, and close all execute at market price. If you set -5, when the trader’s open information is received, a position is opened only if the trader’s position PnL at that time is less than or equal to -5%; otherwise it keeps waiting for a pullback. PnL is analyzed every second, and a market open is placed as soon as the condition is met.
+
+**Reverse Copy Trading**: Literally: when the trader goes long you go short; when the trader goes short you go long. Open, add, reduce, and close are synchronized.
+
+**24h Volume Ranking Copy Trading**: Only copy the top XX coins on that exchange ranking list, to avoid traders opening low-liquidity altcoins that leave followers holding the bag.
+
+**Trader Principal Monitor**: Prevents malicious small-capital opens by traders. When funds are below the preset threshold, opens are not followed—only reduce and close are followed.
+
+**Whitelist**: Only copy a specific coin; follow nothing else
+
+**Blacklist**: Follow everything except a specific coin

@@ -1,0 +1,53 @@
+---
+slug: vip/ws
+title: "API跟单"
+description: "API跟单"
+category: tutorial
+tags:
+  - vip
+source_locale: zh-CN
+translation_status: source
+published_at: 2026-08-04
+updated_at: 2026-08-04
+status: published
+---
+
+<iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=115096701372462&bvid=BV1egekzLEgR&cid=31964137847&p=1&autoplay=0"
+        frameBorder="0" allowFullScreen  width="100%" height="450px"/>
+
+<Note>
+    API跟单适用场景：
+    1. 私域带单，且不收跟单账户的交易分成。
+    2. 你能私下弄到高手的交易账户api，同时你也想私下跟单他的交易，甚至售卖他的仓位信息给别人跟单。
+    3. 你在使用其他第三方的量化软件或者跟单工具，不想给对方收益分成，可以在对方平台使用小号以最小金额使用，然后同步仓位给你的大号账户。
+</Note>
+
+<Step>
+
+    <StepItem title="添加带单API">
+        [添加只读API](/docs/exchange/add)，给API设置好名字
+
+        <Note title="注意" type="warning">
+            不要给这个API添加IP白名单，否则无法进行跟单
+        </Note>
+    </StepItem>
+    <StepItem title="选择或搜索你要跟随的API">
+        ![Ws Pn](@asset:tutorials/ws.png)
+    </StepItem>
+    <StepItem title="创建跟单任务">
+        <Note>
+            确保在带单API是空仓的时候开始跟单\
+            否则交易员进行加仓或者减仓时，会给你开出他剩余的仓位量（后期会对此情况进行优化处理）\
+            \
+            举例说明：\
+            当前交易员的已经有BTC的持仓，持仓量为2。\
+            如果交易员进行加仓操作，BTC仓位量变为3，加仓量为1。如果你是1比1进行跟单，那么你的持仓将会从0直接变为3。\
+            如果交易员进行减仓操作，BTC仓位量变为1，减仓量为1。如果你是1比1进行跟单，那么你的持仓将会从0直接变为1。\
+            为避免此情况发生，最好等带单的账户为空仓时再进行跟单。
+        </Note>
+        填写跟单任务信息，创建跟单。
+
+        此跟单方式延迟最低，稳定性最高。
+    </StepItem>
+
+</Step>
