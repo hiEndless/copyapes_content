@@ -46,7 +46,10 @@
       "path": "legal/privacy.mdx",
       "locales": {
         "zh-CN": "published",
-        "en-US": "published"
+        "zh-TW": "published",
+        "en-US": "published",
+        "ja-JP": "published",
+        "ko-KR": "published"
       }
     },
     "legal/terms": {
